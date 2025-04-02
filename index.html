@@ -2,15 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Power BI Dashboard - TV 1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power BI Dashboard</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: black;
+        }
+        img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            cursor: pointer;
+        }
+        iframe {
+            width: 100vw;
+            height: 100vh;
+            border: none;
+            display: none;
+        }
+    </style>
     <script>
-        function openDashboard() {
-            window.open("https://app.powerbi.com/view?r=eyJrIjoiNjgyOTAwNTktNmY4MC00YzE3LTgzMjEtYWJhMmY5NDc4MDdiIiwidCI6ImY3OTIwMDI5LTM5ZjktNDFiNy05Yzk0LWVjNzMzOTVkMTg0ZCIsImMiOjEwfQ%3D%3D", "_blank");
+        function showDashboard() {
+            document.getElementById("image").style.display = "none";
+            document.getElementById("dashboard").style.display = "block";
         }
     </script>
 </head>
-<body onload="openDashboard()">
-    <h2>Opening Power BI Dashboard...</h2>
-    <p>If nothing happens, <a href="https://app.powerbi.com/view?r=eyJrIjoiNjgyOTAwNTktNmY4MC00YzE3LTgzMjEtYWJhMmY5NDc4MDdiIiwidCI6ImY3OTIwMDI5LTM5ZjktNDFiNy05Yzk0LWVjNzMzOTVkMTg0ZCIsImMiOjEwfQ%3D%3D" target="_blank">click here</a>.</p>
+<body>
+    <img id="image" src="https://raw.githubusercontent.com/manish9-tt/photo/main/images/ipg.png" alt="TV Display" onclick="showDashboard()">
+    <iframe id="dashboard" title="Power BI Dashboard" src="https://app.powerbi.com/view?r=eyJrIjoiNjgyOTAwNTktNmY4MC00YzE3LTgzMjEtYWJhMmY5NDc4MDdiIiwidCI6ImY3OTIwMDI5LTM5ZjktNDFiNy05Yzk0LWVjNzMzOTVkMTg0ZCIsImMiOjEwfQ%3D%3D" allowFullScreen="true"></iframe>
 </body>
 </html>
