@@ -8,20 +8,22 @@
         body {
             margin: 0;
             overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
+            width: 100vw;
             height: 100vh;
-            background-color: black;
         }
-        img {
-            max-width: 100%;
-            max-height: 100%;
-            object-fit: contain;
+        #image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover; /* Ensures full-screen coverage */
             cursor: pointer;
         }
-        iframe {
+        #dashboard {
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100vw;
             height: 100vh;
             border: none;
